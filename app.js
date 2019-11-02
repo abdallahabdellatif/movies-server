@@ -242,7 +242,7 @@ app.get('/watchlist', function(req, res) {
 app.get('*',function(req,res){
   res.send('404 NOT FOUND');
 });
-var port_num = process.env.PORT | 3000;
+var port_num = process.env.PORT || 3000;
 app.listen(port_num);
 
 // END HERE //
