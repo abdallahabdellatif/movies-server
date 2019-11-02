@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-image: url("background2.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            }
+        h1 {
+            color: white;
+            text-align: center;
+            -webkit-text-stroke: 1px blue;
+        }
+        h2 {
+            color: yellow;
+            text-align:center;
+            -webkit-text-stroke: 1px brown;
+        }
+        h5{
+            color: red;
+            text-align: center;
+            -webkit-text-stroke: 1px white;
+        }
+        .cont {
+            position:relative;
+            left:600px;
+            top:50px;
+            color: white;
+            -webkit-text-stroke: 0.5px black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registration</h1>
+    </div>
+    <div class="cont">
+        <form method='post' action='/register'>
+            Username: <br>
+            <input type="text" id="user" name="username"> <br>
+            Password: <br>
+            <input type="password" id="password" name="password"> <br> <br>
+            <input type="submit" id="simple_click" class="btn btn-secondary" value="Register"> <br>
+        </form>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <% if (msg=='tk'){ %>
+            <h5> This username is already taken. Please try a different username </h5>
+        <% } else if (msg=='eu'){ %>
+            <h5> Username cannot be empty! Please try again</h5>
+        <% } else if (msg=='ep'){ %>
+            <h5> Password cannot be empty! Please try again</h5>
+        <% } else if (msg=='sr'){ %>
+            <h5> You have been registered successfully.</h5>
+            <h5> Return to the  <a href="/">login</a> page</h5>
+        <% } %>
+        
+    </div>
+</body>
+
+</html>

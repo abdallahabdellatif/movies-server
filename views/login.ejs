@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-image: url("background1.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            -webkit-text-stroke: 1px blue;
+        }
+        h2 {
+            color: red;
+            text-align: center;
+            -webkit-text-stroke: 1px black;
+        }
+        h5{
+            color: red;
+            text-align: center;
+            -webkit-text-stroke: 1px white;
+        }
+        .cont {
+            position:relative;
+            left:600px;
+            top:50px;
+            color: white;
+            -webkit-text-stroke: 0.5px black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome, Please log in</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Welcome</h1>
+    <div class="cont">
+        <form method="POST">
+            Username:<br>
+            <input type="text" name="username">
+            <br>
+            Password:<br>
+            <input type="password" name="password">
+            <br><br>
+            <input type="submit" value="Login">
+        </form>
+        <br>
+        <a href="register">I dont have an account</a>
+    </div>
+    <br><br>
+    <div class="container">
+        <% if(msg==''){ %>
+            <h5>Please log in to be able to access the website services</h5>
+        <% } else if(msg=='wp'){ %>
+            <h5> Wrong Password</h5>
+        <% } else if (msg=='nu'){ %>
+            <h5> This username is not registered. </h5>
+        <% } else if (msg=='sr'){ %>
+            <h5> You have been registered successfully. Please log in </h5>
+        <% } else if (msg=='eu'){ %>
+            <h5> Username cannot be empty! Please enter a username.</h5>
+        <% } else if (msg=='ep'){ %>
+            <h5> Password cannot be empty! Please enter a password.</h5>
+        <% } %>
+        <br><br>
+    </div>
+</body>
+</html>
