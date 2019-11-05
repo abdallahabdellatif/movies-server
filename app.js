@@ -135,7 +135,7 @@ app.get('/home', function(req, res) {
 //   res.render('notallowed');
 // })
 
-/*
+
 app.get('/action', function(req, res) {
   if (!req.session.loggedin){
     res.redirect('/');
@@ -237,7 +237,7 @@ app.get('/watchlist', function(req, res) {
 }); 
 
 
-*/
+
 
 app.get('*',function(req,res){
   res.send('404 NOT FOUND');
