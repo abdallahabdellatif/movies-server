@@ -13,21 +13,17 @@
             text-align: center;
             -webkit-text-stroke: 1px blue;
         }
-        .container1 {
-            position: relative;
-            color: white;
-        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Watchlist</title>
+    <title>Movies</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
-        <a class="navbar-brand" style="color: rgb(191, 255, 161)">My Watchlist</a>
+        <a class="navbar-brand" style="color: rgb(191, 255, 161)">Movies</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -43,8 +39,8 @@
         </div>
     </nav>
     <ul>
-            <% for(var i=0 ; i< movies.length ; i++ ) { %>
-                <% if(movies[i]=='fightclub'){ %>
+            <% for(var i=0 ; i< suggestedmovies.length ; i++ ) { %>
+                <% if(suggestedmovies[i]=='fight club'){ %>
                     <div class="container1">
                             <img id="image" src="/fightclub.jpg" width="20%" height="20%">
                             <br>
@@ -52,40 +48,40 @@
                             <br>
                             <button onclick="location.href = '/fightclub';" id="fightclub" class="btn btn-secondary ml-3"> View </button>
                     </div>
-                    <% } else if (movies[i]=='darkknight'){ %>
-                        <div class="container1">
+                    <% } else if (suggestedmovies[i]=='the dark knight'){ %>
+                        <div class="container2">
                                 <img id="image" src="/darkknight.jpg" width="20%" height="20%">
                                 <br>
                                 <label id ="label2" class="ml-4 my-2">The Dark Knight (2008)</label>
                                 <br>
                                 <button onclick="location.href = '/darkknight';" id="darkknight" class="btn btn-secondary ml-3"> View </button>
                             </div>
-                        <% } else if (movies[i]=='godfather'){ %>
-                            <div class="container1">
+                        <% } else if (suggestedmovies[i]=='the godfather'){ %>
+                            <div class="container3">
                                     <img id="image" src="/godfather.jpg" width="20%" height="20%">
                                     <br>
                                     <label id="label1" class="ml-4 my-2">The Godfather (1972)</label>
                                     <br>
                                     <button onclick="location.href = '/godfather';" id="godfather" class="btn btn-secondary ml-3"> View </button>
                                 </div>
-                            <% } else if (movies[i]=='godfather2'){ %>
-                                <div class="container1">
+                            <% } else if (suggestedmovies[i]=='the godfather 2'){ %>
+                                <div class="container4">
                                         <img id="image" src="/godfather2.jpg" width="20%" height="20%">
                                         <br>
                                         <label id ="label2" class="ml-4 my-2">The Godfather: Part II (1974)</label>
                                         <br>
                                         <button onclick="location.href = '/godfather2';" id="godfather2" class="btn btn-secondary ml-3"> View </button>
                                     </div>
-                                <% } else if (movies[i]=='scream'){ %>
-                                    <div class="container1">
+                                <% } else if (suggestedmovies[i]=='scream'){ %>
+                                    <div class="container5">
                                             <img id="image" src="/scream.jpg" width="20%" height="20%">
                                             <br>
                                             <label id="label1" class="ml-4 my-2">Scream (1996)</label>
                                             <br>
                                             <button onclick="location.href = '/scream';" id="scream" class="btn btn-secondary ml-3"> View </button>
                                         </div>
-                                    <% } else if (movies[i]=='conjuring'){ %> 
-                                        <div class="container1">
+                                    <% } else if (suggestedmovies[i]=='the conjuring'){ %> 
+                                        <div class="container6">
                                                 <img id="image" src="/conjuring.jpg" width="20%" height="20%">
                                                 <br>
                                                 <label id ="label2" class="ml-4 my-2">The Conjuring (2013)</label>

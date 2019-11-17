@@ -44,6 +44,15 @@
         #my {
             zoom: 110%;
         }
+        .msg{
+            position: fixed;
+            left: 65px;
+            top: 550px;
+            color: red;
+            text-align: justify;
+            text-justify: inter-word;
+            -webkit-text-stroke: 1px white;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,12 +85,19 @@
             The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.
     </div>
     <div class="watchlist">
-        <button id="watchlist" class="btn btn-secondary ml-3">Add to Watchlist</button>
+        <form name="watchlistf" method="POST" action='/godfather2'>
+            <button id="watchlist" class="btn btn-secondary ml-3">Add to Watchlist</button>
+        </form>
     </div>
     <div class="trailer">
         <video width="480" height="360" controls>
             <source src="/godfather2.mp4">
         </video>
+    </div>
+    <div class="msg">
+        <% if(msg=='n'){ %>
+            <h5>This movie already exists in your watchlist</h5>
+            <% } %>
     </div>
 </body>
 </html>
